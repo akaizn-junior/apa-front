@@ -1,0 +1,26 @@
+/* logo */
+.logo {
+  grid-area: logo;
+  font-size: 40px;
+  font-weight: bold;
+  font-variant: normal;
+  color: black;
+  cursor: pointer;
+}
+
+.logo a { outline: none; border: none; }
+.logo a { color: black; }
+.logo a:hover, .logo a:focus { color: black }
+
+/* style each letter from the split logo */
+.logo .char1A {
+  color: rgb(92, 92, 255);
+}
+
+.logo .char3P {
+  color: rgb(247, 189, 83);
+}
+
+.logo .char5A {
+  color: rgb(192, 19, 192);
+}

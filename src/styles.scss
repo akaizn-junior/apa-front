@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "./assets/magentacss/magenta";
+@import url('https://fonts.googleapis.com/css?family=Gothic+A1|Yanone+Kaffeesatz');
+
+body {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Gothic A1', sans-serif;
+}
+
+//form validation
+
+//author link
+.author {
+  background: greenyellow;
+  padding: 1px 1.5px 1px 1.5px;
+  color: black;
+  width: fit-content;
+  cursor: pointer;
+}
+
+a.author {
+  color: black;
+
+  &:hover {
+    border: none;
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+//no outlines on links
+a {
+  outline: none;
+}
+
+//no horizontal scroll
+body {
+  overflow-x: hidden;
+}

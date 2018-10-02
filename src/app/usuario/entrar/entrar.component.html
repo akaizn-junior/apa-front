@@ -1,0 +1,36 @@
+<app-logo></app-logo>
+<div class="entrar box box-shadow-inset">
+  <form id="entrarForm" #entrarForm="ngForm"
+    name="entrarForm"
+    (ngSubmit)="entrar(entrarForm)" novalidate>
+    <div class="input-box">
+      <label for="user">e-mail ou apelido</label>
+      <input type="text" id="user" name="user"
+      ngModel #userLogin="ngModel"
+      autofocus required>
+    </div>
+    <div class="input-box">
+      <label for="pass">password</label>
+      <input type="password" id="pass" name="pass"
+        placeholder="use 8-12 caráteres"
+        ngModel #password="ngModel"
+        required>
+    </div>
+    <div>
+      <button [disabled]="!entrarForm.valid" type="submit">Entrar</button>
+    </div>
+    <span class="recuperar">
+      <a routerLink="/recuperar">Esqueci a senha</a>
+    </span>
+    <span class="lembra-box">
+      <label for="lembra">lembra de mim</label>
+      <input type="checkbox" class="mg-button" value="true"
+        name="lembra" id="lembra" ngModel #remember="ngModel">
+    </span>
+  </form>
+  <p id="registro-link">
+    <a routerLink="/registro" title="Não tens uma conta?">Registra-se</a>
+  </p>
+  <div class="error" *ngIf="error">{{ errorMsg }}</div>
+</div>
+<app-footer></app-footer>

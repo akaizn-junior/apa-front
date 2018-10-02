@@ -1,0 +1,17 @@
+<div class="navbar nav">
+    <app-logo></app-logo>
+    <nav id="menu">
+      <ul *ngFor="let item of menu">
+        <li>
+          <a routerLink="{{item.link}}"
+          href="{{item.link}}"
+          title="{{item.title}}">{{item.name}}</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="entrar">
+      <a routerLink="/entrar"
+      href="/entrar"
+      title="Entre ou Registra-se">Entrar</a>
+    </div>
+</div>

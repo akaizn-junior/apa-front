@@ -1,0 +1,42 @@
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: "logo menu entrar";
+  border: 1px solid rgb(255, 155, 144);
+  background-image: linear-gradient(135deg, rgb(242, 80, 80) 10%,rgb(255, 249, 126) 100%);
+}
+
+app-logo {
+  grid-area: logo;
+  margin-top: -4px;
+}
+
+/* menu */
+#menu {
+  grid-area: menu;
+  text-align: left;
+  color: whitesmoke;
+  font-size: 18px;
+}
+
+/* entrar btn */
+.entrar {
+  grid-area: entrar;
+  position: relative;
+  text-align: right;
+  right: 20px;
+  padding: 7px;
+  font-size: 16px;
+}
+
+/* nav links */
+a {
+  cursor: pointer;
+  color: rgb(58, 57, 57);
+}
+
+a:hover,
+a:focus {
+  color: black;
+  border-bottom: none;
+}

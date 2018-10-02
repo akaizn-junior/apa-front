@@ -1,0 +1,17 @@
+<div id="commentBox" class="box-shadow-inset">
+  <form id="commentForm" name="commentForm"
+  #commentForm="ngForm" (ngSubmit)="addComment(commentForm)"
+  novalidate>
+    <textarea id="comment" name="comment" ngModel
+      #comment="ngModel" required>
+    </textarea>
+    <button [disabled]="!commentForm.valid" type="submit">Comment</button>
+  </form>
+</div>
+<!-- List comments -->
+<div id="comments">
+  <ul *ngFor="let comment of comments">
+    <li>{{ comment.comment }}</li>
+    <li class="author">{{ comment.author.username }}</li>
+  </ul>
+</div>

@@ -1,0 +1,31 @@
+@import "../../../assets/magentacss/assets/mixins";
+
+.registro {
+  width: 25em;
+  margin: auto;
+  @include box-shadow-inset(rgb(231, 233, 231));
+}
+
+.input-box input {
+  width: 100%;
+  border: none;
+  caret-color: magenta;
+}
+
+.nome,
+.sobrenome {
+  display: inline-block;
+  width: 190px;
+  padding-right: 10px;
+}
+
+input,
+button {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#entrar-link {
+  font-weight: 300;
+  font-size: 20px;
+}

@@ -1,0 +1,18 @@
+<app-nav></app-nav>
+<div *ngIf="article" >
+  <div id="article">
+    <span class="title">{{ article.title }}</span>
+    <p>
+      por <a class="author"
+      href="/u/{{ article.author.username }}"
+      title="Visite o usuário"
+      routerLink="/u/{{ article.author.username }}">
+      {{ article.author.name.firstName }} {{ article.author.name.lastName }}</a>
+      em {{ article.createdAt | date: 'dd MMM, yy' }}
+      às {{ article.createdAt | date:'h:mm a'}}
+    </p>
+    <div class="text">{{ article.text }}</div>
+    <app-comment></app-comment>
+  </div>
+</div>
+<app-footer></app-footer>

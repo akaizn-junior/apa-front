@@ -1,0 +1,60 @@
+<app-nav></app-nav>
+<div *ngIf="usuario" class="container">
+  <!-- Menu -->
+  <section id="menu">
+    <ul class="perfil">
+      <li class="letra">{{ letra }}</li>
+      <li class="nome">
+        {{ usuario.name.firstName }} {{ usuario.name.lastName }}
+      </li>
+      <li class="author">
+        {{ usuario.username }}
+      </li>
+      <li class="email">
+        {{ usuario.email }}
+      </li>
+    </ul>
+    <ul class="my-items">
+      <li class="btn" (click)="showP=!showP">Projetos</li>
+      <li class="btn" (click)="showA=!showA">Artigos</li>
+      <li class="btn" (click)="showD=!showD">Discussões</li>
+      <li class="btn" (click)="showI=!showI">Interesses</li>
+    </ul>
+    <ul class="sets">
+      <li class="btn" (click)="showC=!showC">Configurações</li>
+      <li></li>
+    </ul>
+  </section>
+  <!-- Dashboard -->
+  <section class="dashboard">
+    <div id="articles">
+      <div *ngIf="artigos && showA">
+        <div *ngFor="let article of articles">
+          <span>{{ article.title }}</span>
+        </div>
+      </div>
+    </div>
+    <div id="projects">
+      <div *ngIf="projects && showP">
+        <div *ngFor="let project of projects">
+          <span>{{ project.name }}</span>
+        </div>
+      </div>
+    </div>
+    <div id="discussoes">
+      <div *ngIf="discussions && showD">
+        <div *ngFor="let discussion of discussions">
+          <span>{{ discussion.title }}</span>
+        </div>
+      </div>
+    </div>
+    <div id="interesses">
+      <div *ngIf="interests && showI">
+        <div *ngFor="let interest of interests">
+          <span>{{ interest }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<app-footer></app-footer>

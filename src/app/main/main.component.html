@@ -1,0 +1,50 @@
+<!-- Landing page -->
+<app-nav></app-nav>
+<main role="main">
+  <section *ngIf="articles" id="articles">
+    <h1>Artigos</h1>
+    <div *ngFor="let article of articles" class="sample-articles">
+      <div>
+        <p class="title">
+          <a href='/article/{{ article._id }}'
+          routerLink="/article/{{ article._id }}">
+          {{ article.title }}</a>
+        </p>
+        <div class="sample-text"></div>
+        <p>
+          por <a class="author"
+            href="/u/{{ article.author.username }}"
+            routerLink="/u/{{ article.author.username }}">
+            {{ article.author.name.firstName }} {{ article.author.name.lastName }}</a>
+            em {{ article.createdAt | date: 'dd MMM, yy' }}
+            às {{ article.createdAt | date:'h:mm a'}}
+        </p>
+      </div>
+    </div>
+  </section>
+  <section *ngIf="projects" id="projects">
+    <h1>Projetos</h1>
+    <div *ngFor="let project of projects" class="sample-projects">
+      <div>
+        <p class="title">
+          <a href='/project/{{ project._id }}'
+          routerLink="/project/{{ project._id }}">
+          {{ project.name }}</a>
+        </p>
+      </div>
+    </div>
+  </section>
+  <section *ngIf="discussions" id="discussions">
+    <h1>Discussões</h1>
+    <div *ngFor="let discussion of discussions" class="sample-discussions">
+      <div>
+        <p class="title">
+          <a href='/discussion/{{ discussion._id }}'
+          routerLink="/discussion/{{ discussion._id }}">
+          {{ discussion.title }}</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+<app-footer></app-footer>

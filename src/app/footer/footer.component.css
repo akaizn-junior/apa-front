@@ -1,0 +1,40 @@
+footer {
+  width: 105%;
+  margin-bottom: -10px;
+  margin-left: -10px;
+  font-family: sans-serif;
+  font-stretch: ultra-condensed;
+  background: rgb(156, 243, 255);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: right;
+  border-top-left-radius: 75%;
+  border: 2px solid rgb(77, 213, 231);
+}
+
+/* .lista */
+
+.lista {
+  background: rgb(240, 194, 108);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: left;
+  border-top-right-radius: 95%;
+  padding-top: 20px;
+  min-height: 200px;
+  border: 2px solid rgb(231, 174, 67);
+}
+
+.lista li {
+  padding: 2px;
+}
+
+.lista li a {
+  color: rgb(0, 162, 255);
+}
+
+.lista li a:hover {
+  color: rgb(21, 106, 155);
+  -webkit-transition: color 1s;
+  transition: color 1s;
+}

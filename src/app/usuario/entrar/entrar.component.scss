@@ -1,0 +1,43 @@
+@import "../../../assets/magentacss/assets/mixins";
+
+.entrar {
+  width: 25em;
+  margin: auto;
+  @include box-shadow-inset(rgb(231, 233, 231));
+}
+
+.input-box input {
+  width: 100%;
+  border: none;
+  caret-color: magenta;
+}
+
+.error{
+  background: rgb(255, 203, 203);
+  font-size: 16px;
+  padding: 4px;
+}
+
+input,
+button {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.lembra-box {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 5px;
+
+  input {
+    position: relative;
+    top: 3px;
+  }
+}
+
+#registro-link {
+  font-weight: 300;
+  font-size: 20px;
+}
